@@ -165,7 +165,3 @@ p.forEach(element => {
 });
 
 //27.	Write a function to toggle the class active on an element when clicked.
-
-function toggleactive(){
-
-}
