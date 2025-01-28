@@ -145,9 +145,9 @@ togglevisibility();
 //23.	Add a submit event listener to a form with the ID signup that prevents the default form submission.
 
 //24.	Attach a keydown event listener to the document and log the key pressed to the console.
-  document.addEventListener("keydown" ,(event)=>{
-    console.log(`key pressed: ${event.key}`)
-  })
+//   document.addEventListener("keydown" ,(event)=>{
+//     console.log(`key pressed: ${event.key}`)
+//   })
 
 //25.	Write a function that adds a click event listener to all buttons on the page and changes their background to yellow when clicked.
 function addlistener(){
@@ -246,4 +246,50 @@ add.setAttribute("target","_blank");
     element.removeAttribute("required");      
  });
 
-//
+//Combining Multiple Topics
+//41. 	Write a function to add an event listener to all buttons, and when clicked, toggle the class active on them.
+
+//42.	Create a function to select a <div> by ID, add a class selected, change its text to "Hello", and set its background color to yellow.
+function ab(){
+    const div = document.querySelector("#select");
+    div.classList.add("selected");
+    div.textContent ="Hello Everyone";
+    div.style.backgroundColor= "yellow";
+}
+ab();
+
+//43.	Add a click event listener to all <li> elements inside a <ul> that logs the text content of the clicked item.
+const li = document.querySelectorAll("li");
+li.forEach(element => {
+    element.addEventListener("click",(event)=>{
+        console.log(event.target.textContent);
+     })
+});
+
+//44.	Write a function to add a new <p> element inside a <div> with the ID content and set its text to "  Paragraph".
+function addelement(){
+    const div = document.querySelector("#content");
+    div.innerHTML = "<p>paragraph</p>"
+}
+addelement();
+
+// function addelement() {
+//     const div = document.querySelector("#content");
+//     const newParagraph = document.createElement("p");
+//     newParagraph.textContent = "Paragraph";
+//     div.appendChild(newParagraph);
+// }
+
+// addelement();
+
+//45.	Add a mouseover event listener to an <img> that changes its src attribute to "hover.jpg".
+const image = document.querySelector(".img");
+image.addEventListener("mouseover", ()=>{
+    image.src = "hover.jpg";
+});
+
+image.addEventListener("mouseout",()=>{
+    image.src = "tiranga.webp";
+})
+
+//Real-Life Scenarios
