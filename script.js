@@ -118,10 +118,10 @@ box.style.backgroundColor = "red";
 
 //18.	Select all <h1> elements and change their text color to green.
 
-const h1 = document.querySelectorAll("h1");
-h1.forEach(ele => {
-    ele.style.color="green";
-});
+// const h1 = document.querySelectorAll("h1");
+// h1.forEach(ele => {
+//     ele.style.color="green";
+// });
 
 //19.	Change the display property of an element with the class hidden to block.
 const element = document.querySelector(".element");
@@ -135,14 +135,19 @@ togglevisibility();
 
 //Adding/Removing Event Listeners
 //21.	Add a click event listener to a button with the ID login that logs "Button clicked!" to the console.
-const button = document.querySelector("#login");
-button.addEventListener("click",()=>{
- console.log("button clicked!")
-})
+// const button = document.querySelector("#login");
+// button.addEventListener("click",()=>{
+//  console.log("button clicked!")
+// })
 
 //22.	Write a function to remove a mouseover event listener from an element with the class hoverable.
 
 //23.	Add a submit event listener to a form with the ID signup that prevents the default form submission.
+
+//24.	Attach a keydown event listener to the document and log the key pressed to the console.
+  document.addEventListener("keydown" ,(event)=>{
+    console.log(`key pressed: ${event.key}`)
+  })
 
 //25.	Write a function that adds a click event listener to all buttons on the page and changes their background to yellow when clicked.
 function addlistener(){
@@ -165,3 +170,80 @@ p.forEach(element => {
 });
 
 //27.	Write a function to toggle the class active on an element when clicked.
+
+
+//28.	Remove the class hidden from a <div> with the ID popup.
+const div = document.querySelector(".hidden");
+div.removeAttribute("class");
+div.setAttribute("id","popup");
+
+//10, 12, 15,23,25,41,46,47,48,49,50
+//29.	Add a class selected to all <li> elements inside a <ul> with the class list.
+
+// const list = document.querySelectorAll("li");
+// list.forEach(ele => {
+//     ele.classList.add("selected");
+    
+// });
+
+//30.	Write a function that removes the class disabled from a button with the ID submit.
+function removeclass(){
+    const buttons = document.querySelector("#submit");
+    buttons.removeAttribute("class");
+}
+ removeclass();
+
+ //Adding/Removing IDs to HTML Elements
+//31.	Write code to add the ID featured to a <div> with the class hero.
+const hero = document.querySelector(".hero");
+hero.id = "featured";
+
+//32.	Remove the ID old-id from an element and add a new ID new-id to it.
+const ele = document.querySelector("#old-id");
+
+ele.id = "new-id";
+
+//33.	Write a function that sets a unique ID to each <li> in an ordered list.
+function setuniqueId (){
+    const list = document.querySelectorAll("#orderedlist li");
+    list.forEach((li, index) => {
+        li.id = 'item-'+ (index + 1);
+        
+    });
+}
+setuniqueId ();
+
+//34.	Add an ID header-main to the first <h1> element on the page.
+const h1 = document.querySelector("h1");
+h1.id = "header-main";
+
+//35.	Remove the ID from an element with the class removable.
+
+const classes = document.querySelector(".removable");
+classes.removeAttribute("id");
+
+//Adding/Removing Attributes to HTML Elements
+//36.	Add a src attribute with the value "image.jpg" to an <img> element with the ID thumbnail.
+const img = document.querySelector("#thumbnail");
+img.src =src="image.png";
+
+//37.	Remove the disabled attribute from a button with the class enable-button.
+
+const btns = document.querySelector(".enable-button");
+btns.removeAttribute("disabled");
+
+//38.	Write a function to set a data-user-id attribute with the value "12345" to a <div> with the class profile.
+const file = document.querySelector(".profile");
+file.setAttribute("data-user-id","12345");
+
+//39.	Select a <a> tag and add a target="_blank" attribute to open the link in a new tab.
+const add = document.querySelector("a");
+add.setAttribute("target","_blank");
+
+//40.	Remove the required attribute from all <input> elements inside a form with the ID registration.
+ const input = Array.from(document.querySelectorAll("#registration input"));
+ input.forEach(element => {
+    element.removeAttribute("required");      
+ });
+
+//
