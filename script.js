@@ -129,7 +129,8 @@ element.classList.remove("hidden");
 
 //20.	Write a function that toggles the visibility of an element (hide/show) when called.
 function togglevisibility(){
-
+ const elem = document.querySelector(".elem");
+ elem.classList.toggle("hidden");
 }
 togglevisibility();
 
@@ -173,9 +174,9 @@ p.forEach(element => {
 
 
 //28.	Remove the class hidden from a <div> with the ID popup.
-const div = document.querySelector(".hidden");
-div.removeAttribute("class");
-div.setAttribute("id","popup");
+// const div = document.querySelector(".hidden");
+// div.removeAttribute("class");
+// div.setAttribute("id","popup");
 
 //10, 12, 15,23,25,41,46,47,48,49,50
 //29.	Add a class selected to all <li> elements inside a <ul> with the class list.
@@ -211,7 +212,7 @@ function setuniqueId (){
         
     });
 }
-setuniqueId ();
+setuniqueId();
 
 //34.	Add an ID header-main to the first <h1> element on the page.
 const h1 = document.querySelector("h1");
