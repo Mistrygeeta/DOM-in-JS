@@ -142,6 +142,9 @@ togglevisibility();
 // })
 
 //22.	Write a function to remove a mouseover event listener from an element with the class hoverable.
+function removemouse(){
+    
+}
 
 //23.	Add a submit event listener to a form with the ID signup that prevents the default form submission.
 
